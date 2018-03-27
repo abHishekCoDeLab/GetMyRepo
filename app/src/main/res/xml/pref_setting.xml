@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_bass"
+        android:summaryOff="Hidden"
+        android:summaryOn="Visible"
+        android:title="Show Bass"/>
+
+    <ListPreference
+        android:defaultValue="Red"
+        android:entries="@array/entities"
+        android:entryValues="@array/value"
+        android:key="list_pref"
+        android:title="choose any of them"/>
+
+    <EditTextPreference
+        android:defaultValue="Android"
+        android:key="Interest"
+        android:title="your interest : "/>
+
+        -->
+
+    <EditTextPreference
+        android:key="name"
+        android:title="Name : "/>
+
+    <EditTextPreference
+        android:defaultValue="Android"
+        android:key="interest"
+        android:title="Interest : "/>
+
+    <ListPreference
+        android:defaultValue="Star"
+        android:entries="@array/entities"
+        android:entryValues="@array/value"
+        android:key="list_pref"
+        android:title="Sort By : "/>
+
+</PreferenceScreen>

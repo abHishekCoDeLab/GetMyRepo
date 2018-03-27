@@ -1,4 +1,4 @@
-package com.android.prince.bpl;
+package com.android.prince.getmyrepo;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

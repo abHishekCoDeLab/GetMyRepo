@@ -3,10 +3,13 @@ package com.android.prince.getmyrepo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebView;
 
-public class WebView extends AppCompatActivity {
+public class WebViewAct extends AppCompatActivity {
 
     private String repoUrl;
+
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,9 @@ public class WebView extends AppCompatActivity {
         Intent intent = getIntent();
         repoUrl = intent.getStringExtra("URL");
 
-        android.webkit.WebView
+        webView = (WebView)findViewById(R.id.WebView);
+        webView.loadUrl(repoUrl);
+
+
     }
 }

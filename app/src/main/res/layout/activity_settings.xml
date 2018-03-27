@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/man"
+        android:scaleType="fitXY"
+        android:minWidth="128dp"
+        android:minHeight="128dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:id="@+id/ImagePerson"
+        android:layout_weight="1"/>
+
+    <fragment android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/SettingFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="com.android.prince.getmyrepo.java.SettingFragment"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="64dp"
+        android:layout_below="@id/ImagePerson"
+        android:layout_weight="0"/>
+
+</LinearLayout>

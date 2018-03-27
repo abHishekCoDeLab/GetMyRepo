@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="value" >
+        <item>stars</item>
+        <item>forks</item>
+        <item>updated</item>
+    </array>
+
+    <array name="entities">
+        <item>Star</item>
+        <item>Forks</item>
+        <item>Updated</item>
+    </array>
+</resources>

@@ -1,9 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.prince.getmyrepo.ShowDetail">
+    tools:context="com.android.prince.getmyrepo.ShowDetail"
+    android:background="@color/white">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/ToolBarDetail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Google"
+                android:paddingTop="16dp"
+                android:textStyle="normal"
+                android:fontFamily="monospace"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:id="@+id/OwnernameDetail"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:textAlignment="textEnd"
+                android:src="@drawable/ic_launcher_background"
+                android:paddingTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/OwnerPhotoDetail"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ToolBarDetail">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="Repository Name : "
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Material Design"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/RepoNameDetailView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="Owner : "
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Google"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/RepoOwnerNameDetailView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="Language : "
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="CSS"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/RepoLangDetailView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="Star : "
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="2333"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/RepoStarDetailView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="Fork : "
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="2333"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/RepoForkDetailView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="View : "
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="2333"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/RepoViewDetailView"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Code"
+                android:layout_marginTop="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"
+                android:id="@+id/Code"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>
