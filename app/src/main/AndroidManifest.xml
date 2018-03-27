@@ -8,32 +8,38 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
-        android:label=""
+        android:label="GetMyRepo"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.nobar">
+
+        </activity>
+        <activity
+            android:name=".ShowDetail"
+            android:theme="@style/AppTheme.nobar" />
+        <activity
+            android:name=".WebViewAct"
+            android:theme="@style/AppTheme.nobar" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".SplashScreen"
+            android:theme="@style/AppTheme.nobar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <activity
-            android:name=".ShowDetail"
-            android:theme="@style/AppTheme.nobar" />
-
-        <activity
-            android:name=".WebViewAct"
-            android:theme="@style/AppTheme.nobar" />
-
-        <activity android:name=".SettingsActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".EnterDeatilLayout"
+            android:theme="@style/AppTheme.nobar"/>
     </application>
 
 </manifest>

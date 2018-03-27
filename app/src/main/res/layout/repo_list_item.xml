@@ -41,9 +41,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="24dp"
-                    android:text="view"
+                    android:text="2344"
                     android:id="@+id/ViewRepoList"
                     android:layout_weight="1"
+                    android:singleLine="true"
                     android:textAlignment="textEnd"
                     android:layout_marginRight="4dp"/>
 
@@ -61,6 +62,7 @@
                     android:text="start"
                     android:id="@+id/StarRepoList"
                     android:layout_weight="1"
+                    android:singleLine="true"
                     android:textAlignment="textEnd"
                     android:layout_marginRight="4dp"/>
 
@@ -78,6 +80,7 @@
                     android:text="599"
                     android:id="@+id/ForkRepoList"
                     android:layout_weight="1"
+                    android:singleLine="true"
                     android:textAlignment="textEnd"
                     android:layout_marginRight="4dp"/>
 

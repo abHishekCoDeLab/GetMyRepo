@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.android.prince.getmyrepo.R;
 import com.android.prince.getmyrepo.RecyclerItemClickListener;
@@ -36,6 +37,7 @@ public class RepoList extends Fragment{
     Context context;
 
     RecyclerView recyclerView;
+    ProgressBar progressBar;
 
     private String search = "";
     private String sortBy = "";
@@ -68,6 +70,7 @@ public class RepoList extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
         recyclerView = (RecyclerView)getView().findViewById(R.id.RepoListRecyclerView);
+        progressBar = (ProgressBar)getView().findViewById(R.id.ProgressBar);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
@@ -178,6 +181,7 @@ public class RepoList extends Fragment{
                     }
                 }
 
+                progressBar.setVisibility(View.GONE);
                 RepoListAdapter repoListAdapter = new RepoListAdapter(context,myRepoList);
                 recyclerView.setAdapter(repoListAdapter);
 

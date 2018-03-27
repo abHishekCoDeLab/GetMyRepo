@@ -11,6 +11,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.android.prince.getmyrepo.fragment.RepoList;
 
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private static final String LIFECYCLE_CALLBACK_TEXT_KEY = "callbacks";
 
     String searchStr  = "Android";
-    String sortBy = "Star";
+    String sortBy = "stars";
 
     ImageView setting;
 
@@ -32,14 +34,34 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         setting = (ImageView)findViewById(R.id.SettingButton);
         search = (TextView)findViewById(R.id.TextSearch);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        if(!(sharedPreferences.getString("interest","Android").isEmpty())){
-            searchStr = sharedPreferences.getString("interest","Android");
+       /*
+            try {
+
+                Intent intent = getIntent();
+                String name = intent.getStringExtra("NAME");
+                String interest = intent.getStringExtra("INTEREST");
+                searchStr = interest;
+
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("name", name);
+                editor.putString("interest",interest);
+
+
+            }catch (Exception e){
+
+            }
+
+        */
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if(!(sharedPreferences.getString("interest",searchStr).isEmpty())){
+            searchStr = sharedPreferences.getString("interest",searchStr);
         }
 
-        if(!(sharedPreferences.getString("list_pref","star").isEmpty())){
-            sortBy = sharedPreferences.getString("list_pref","Android");
+        if(!(sharedPreferences.getString("list_pref","stars").isEmpty())){
+            sortBy = sharedPreferences.getString("list_pref","stars");
         }
 
         setupPreferenced();
@@ -99,17 +121,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-       /* if(key.equalsIgnoreCase("show_bass")){
-            Log.e("Value of checkbox : ",String.valueOf(sharedPreferences.getBoolean(key,true)));
-        }
-
-        else if(key.equalsIgnoreCase("list_pref")){
-            Log.e("Value of list pref : ",String.valueOf(sharedPreferences.getString(key,"red")));
-        }
-
-        else if(key.equalsIgnoreCase("Interest")){
-            Log.e("Value of edit pref : ",String.valueOf(sharedPreferences.getString(key,"Android")));
-        }   */
 
        if(key.equalsIgnoreCase("interest")){
 

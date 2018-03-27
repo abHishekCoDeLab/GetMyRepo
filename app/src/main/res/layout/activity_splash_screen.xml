@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.prince.getmyrepo.SplashScreen"
+    android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GetMyRepo"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_centerInParent="true"
+            android:id="@+id/GetMyRepo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search As You Want To Know"
+            android:textColor="#a9a9a9"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            android:layout_below="@id/GetMyRepo"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_centerInParent="true"/>
+
+</RelativeLayout>

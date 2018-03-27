@@ -27,8 +27,8 @@
         android:name="com.android.prince.getmyrepo.java.SettingFragment"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_below="@id/ImagePerson"
         android:layout_weight="0"/>
 

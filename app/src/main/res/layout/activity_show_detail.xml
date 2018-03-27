@@ -27,6 +27,7 @@
                 android:fontFamily="monospace"
                 android:textColor="@color/white"
                 android:textSize="22sp"
+                android:singleLine="true"
                 android:id="@+id/OwnernameDetail"
                 android:layout_weight="1"/>
 
@@ -34,7 +35,6 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:textAlignment="textEnd"
-                android:src="@drawable/ic_launcher_background"
                 android:paddingTop="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
